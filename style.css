@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@400&display=swap');
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -10,3 +12,32 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
+
+.card {
+    border-radius: 12px;
+    /* border: none; */
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+        margin: 1.2vw;
+}
+
+.card-body {
+    padding: 12px;
+}
+
+.card-body h5 {
+    margin: 0;
+}
+
+span {
+    color: blue;
+}
+
+@media (min-width: 1200px) { .card {
+    margin: 0.5vw;
+} }
