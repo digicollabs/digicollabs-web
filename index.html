@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="digicollabs_icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/assets/digicollabs_icon.svg" type="image/x-icon">
     <script src="index.js"></script>
 
     <title>DigiCollabs</title>
@@ -21,16 +21,59 @@
     <div class="container d-flex flex-column min-vh-100">
         <div class="row flex-grow-1 justify-content-center align-items-center">
             <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 col-12">
-                <img src="digicollabs_logo.svg" class="img-fluid mx-auto d-block marginbottom" id="logoDigicollabs">
+                <img src="./src/assets/digicollabs_logo.svg" class="img-fluid mx-auto d-block marginbottom" id="logoDigicollabs">
                 <div id="countdown"></div>
-                <button type="button" class="btn mx-auto d-block margintop" id="btnDigicollabs">Join the Launch</button>
+                <button type="button" class="btn mx-auto d-block margintop btn-digicollabs" id="btnLaunchModal"
+                    data-toggle="modal" data-target="#staticBackdrop">Join the Launch</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content pl-3 pr-3">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="./src/assets/digicollabs_icon.svg" class="img-fluid mx-auto d-block"
+                                        alt="Logo" id="modalImageDigicollabs">
+                                    <div class="text-center mt-3 mb-2" id="modalTitleDigicollabs">
+                                        Join to our web <span>launch!</span>
+                                    </div>
+                                    <div class="text-center mt-2" id="modalSubtitleDigicollabs">
+                                        Don’t worry, we hate spam too!<br>You can unsubscribe anytime
+                                    </div>
+                                    <div class="input-group">
+                                        <img src="./src/assets/icon_user.svg" class="mr-4" alt="">
+                                        <input type="text"
+                                            class="form-control shadow-none p-0 border-right-0 border-top-0 border-left-0"
+                                            required placeholder="Name*">
+                                    </div>
+                                    <div class="input-group">
+                                        <img src="./src/assets/icon_email.svg" class="mr-4" alt="">
+                                        <input type="email"
+                                            class="form-control shadow-none p-0 border-right-0 border-top-0 border-left-0"
+                                            placeholder="Email*" pattern=".+@globex.com" required>
+                                    </div>
+                                    <button type="button" class="btn mx-auto d-block btn-digicollabs"
+                                        id="btnAgreeSubmit">Join
+                                        the Launch</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
