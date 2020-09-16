@@ -21,7 +21,8 @@
     <div class="container d-flex flex-column min-vh-100">
         <div class="row flex-grow-1 justify-content-center align-items-center">
             <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 col-12">
-                <img src="./src/assets/digicollabs_logo.svg" class="img-fluid mx-auto d-block marginbottom" id="logoDigicollabs">
+                <img src="./src/assets/digicollabs_logo.svg" class="img-fluid mx-auto d-block marginbottom"
+                    id="logoDigicollabs">
                 <div id="countdown"></div>
                 <button type="button" class="btn mx-auto d-block margintop btn-digicollabs" id="btnLaunchModal"
                     data-toggle="modal" data-target="#staticBackdrop">Join the Launch</button>
@@ -37,31 +38,55 @@
                             <div class="row">
                                 <div class="col">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
+                                        <span aria-hidden="true"><img src="./src/assets/icon_close.svg" alt=""></span>
                                     </button>
-                                    <img src="./src/assets/digicollabs_icon.svg" class="img-fluid mx-auto d-block"
-                                        alt="Logo" id="modalImageDigicollabs">
-                                    <div class="text-center mt-3 mb-2" id="modalTitleDigicollabs">
-                                        Join to our web <span>launch!</span>
-                                    </div>
-                                    <div class="text-center mt-2" id="modalSubtitleDigicollabs">
-                                        Don’t worry, we hate spam too!<br>You can unsubscribe anytime
-                                    </div>
-                                    <div class="input-group">
-                                        <img src="./src/assets/icon_user.svg" class="mr-4" alt="">
-                                        <input type="text"
-                                            class="form-control shadow-none p-0 border-right-0 border-top-0 border-left-0"
-                                            required placeholder="Name*">
-                                    </div>
-                                    <div class="input-group">
-                                        <img src="./src/assets/icon_email.svg" class="mr-4" alt="">
-                                        <input type="email"
-                                            class="form-control shadow-none p-0 border-right-0 border-top-0 border-left-0"
-                                            placeholder="Email*" pattern=".+@globex.com" required>
-                                    </div>
-                                    <button type="button" class="btn mx-auto d-block btn-digicollabs"
-                                        id="btnAgreeSubmit">Join
-                                        the Launch</button>
+                                    <form
+                                        action="https://script.google.com/macros/s/AKfycbz9ccaIH1RMBgoMat16n7joNJefp-MCdloIR5VYtLRhqfzPZI0/exec"
+                                        class="gform" method="post" id="formNewsletter">
+
+                                        <div class="form-element">
+                                            <img src="./src/assets/digicollabs_icon.svg"
+                                                class="img-fluid mx-auto d-block" alt="Logo" id="modalImageDigicollabs">
+                                            <div class="text-center mt-3 mb-2" id="modalTitleDigicollabs">
+                                                Join to our web <span>launch!</span>
+                                            </div>
+                                            <div class="text-center mt-2" id="modalSubtitleDigicollabs">
+                                                Don’t worry, we hate spam too!<br>You can unsubscribe anytime
+                                            </div>
+
+                                            <div class="input-group">
+                                                <img src="./src/assets/icon_user.svg" class="mr-4" alt="">
+                                                <input type="text"
+                                                    class="form-control shadow-none p-0 border-right-0 border-top-0 border-left-0"
+                                                    required placeholder="Name*" id="name" name="name">
+                                            </div>
+                                            <div class="input-group">
+                                                <img src="./src/assets/icon_email.svg" class="mr-4" alt="">
+                                                <input type="email"
+                                                    class="form-control shadow-none p-0 border-right-0 border-top-0 border-left-0"
+                                                    placeholder="Email*" required id="email" name="email">
+                                            </div>
+                                            <button type="submit" class="btn mx-auto d-block btn-digicollabs"
+                                                id="btnAgreeSubmit" form="formNewsletter">Join
+                                                the Launch</button>
+                                        </div>
+
+                                        <!-- Thank you message after submitting -->
+                                        <div style="display:none" class="thankyou_message">
+                                            <img src="./src/assets/icon_success.svg" class="img-fluid mx-auto d-block"
+                                                alt="Success" id="modalSuccessImageDigicollabs">
+                                            <div class="text-center mt-3 mb-2" id="modalTitleDigicollabs">
+                                                Thanks for Joining us!
+                                            </div>
+                                            <div class="text-center mt-2" id="modalSubtitleDigicollabs">
+                                                We’ll send you mail, when our website is ready!
+                                            </div>
+
+                                            <button type="button" onclick="location.href='index.html'"
+                                                class="btn mx-auto d-block btn-digicollabs" id="btnBackHome">Back to
+                                                Home</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -69,6 +94,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 
     <!-- Optional JavaScript -->
@@ -82,6 +109,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+    <script data-cfasync="false" type="text/javascript" src="./src/scripts/form-submission-handler.js"></script>
 </body>
 
 </html>
