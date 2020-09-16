@@ -74,13 +74,17 @@
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
-#btnAgreeSubmit {
+#btnAgreeSubmit, #btnBackHome {
     margin-top: 80px;
     margin-bottom: 48px;
 }
 
 #modalImageDigicollabs {
     margin-top: 56px;
+}
+
+#modalSuccessImageDigicollabs {
+    margin-top: 104px;
 }
 
 #modalTitleDigicollabs {
