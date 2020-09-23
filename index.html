@@ -4,16 +4,7 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178379339-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-178379339-1');
-    </script>
+    <script src="./src/scripts/google-analytics.js"></script>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -26,11 +17,11 @@
     <link rel="shortcut icon" href="./src/assets/digicollabs_icon.svg" type="image/x-icon">
     <script src="index.js"></script>
 
-    <title>DigiCollabs</title>
+    <title>DigiCollabs - House of Design & Development</title>
 </head>
 
 <body>
-
+    <!-- Main Element -->
     <div class="container d-flex flex-column min-vh-100">
         <div class="row flex-grow-1 justify-content-center align-items-center">
             <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 col-12">
@@ -43,8 +34,7 @@
 
                 <div class="row justify-content-center mt-5">
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input shadow-none" id="darkSwitch"
-                            onclick="setDarkMode()">
+                        <input type="checkbox" class="custom-control-input shadow-none" id="darkSwitch">
                         <label class="custom-control-label checkbox-1x" for="darkSwitch" id="darkSwitchLabel">Dark
                             Mode</label>
                     </div>
@@ -132,25 +122,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+    <script src="./src/scripts/dark-switch.js"></script>
     <script data-cfasync="false" type="text/javascript" src="./src/scripts/form-submission-handler.js"></script>
-    <script>
-        function setDarkMode() {
-            var isChecked = document.getElementById('darkSwitch').checked;
-            console.log(isChecked);
-            var switchLabel = document.getElementById('darkSwitchLabel');
-            var imgDigicollabsLogo = document.getElementById('logoDigicollabs');
-
-            if (isChecked) {
-                document.body.setAttribute('id', 'darkmode');
-                switchLabel.innerHTML = 'Light Mode';
-                imgDigicollabsLogo.src = './src/assets/digicollabs_logo_dark.svg';
-            } else {
-                document.body.setAttribute('id', '');
-                switchLabel.innerHTML = 'Dark Mode';
-                imgDigicollabsLogo.src = './src/assets/digicollabs_logo_light.svg';
-            }
-        }
-    </script>
 </body>
 
 </html>
