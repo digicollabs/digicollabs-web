@@ -42,6 +42,10 @@
     color: #212121;
 }
 
+.btn-digicollabs:hover {
+    background-color: #FC951C;
+}
+
 .margintop {
     margin-top: 24px;
 }
