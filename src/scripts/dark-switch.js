@@ -5,6 +5,10 @@ var theme = localStorage.getItem('theme');
 var switchLabel = document.getElementById('darkSwitchLabel');
 var imgDigicollabsLogo = document.getElementById('logoDigicollabs');
 
+/*
+Check if you've applied a theme before
+If theme exist, applied a theme and applied logo
+*/
 if (theme == 'dark') {
     document.body.setAttribute('id', 'darkmode');
     imgDigicollabsLogo.src = './src/assets/digicollabs_logo_dark.svg';
