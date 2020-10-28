@@ -33,12 +33,12 @@ var x = setInterval(function () {
                     <div class="row">
                         <div class="col nopadding mr-1 d-flex justify-content-end">
                             <div class="card-digicollabs">
-                                ${days.slice(0,1)}
+                            0
                             </div>
                         </div>
                         <div class="col nopadding d-flex justify-content-start">
                             <div class="card-digicollabs">
-                            ${days.slice(1)}
+                            0
                             </div>
                         </div>
                     </div>
@@ -48,12 +48,12 @@ var x = setInterval(function () {
                     <div class="row">
                         <div class="col nopadding mr-1 d-flex justify-content-end">
                             <div class="card-digicollabs">
-                            ${hours.slice(0,1)}
+                            0
                             </div>
                         </div>
                         <div class="col nopadding d-flex justify-content-start">
                             <div class="card-digicollabs">
-                            ${hours.slice(1)}
+                            0
                             </div>
                         </div>
                     </div>
@@ -67,12 +67,12 @@ var x = setInterval(function () {
                     <div class="row">
                         <div class="col nopadding mr-1 d-flex justify-content-end">
                             <div class="card-digicollabs">
-                            ${minutes.slice(0,1)}
+                            0
                             </div>
                         </div>
                         <div class="col nopadding d-flex justify-content-start">
                             <div class="card-digicollabs">
-                            ${minutes.slice(1)}
+                            0
                             </div>
                         </div>
                     </div>
@@ -82,12 +82,12 @@ var x = setInterval(function () {
                     <div class="row">
                         <div class="col nopadding d-flex justify-content-end">
                             <div class="card-digicollabs">
-                            ${seconds.slice(0,1)}
+                            0
                             </div>
                         </div>
                         <div class="col nopadding ml-1 d-flex justify-content-start">
                             <div class="card-digicollabs">
-                            ${seconds.slice(1)}
+                            0
                             </div>
                         </div>
                     </div>
