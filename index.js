@@ -98,9 +98,9 @@ var x = setInterval(function () {
     </div>
     `;
 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = `<p class="text-center" id="labelCountdown">EXPIRED</p>`;
-    }
+    // if (distance < 0) {
+    //     clearInterval(x);
+    //     document.getElementById("countdown").innerHTML = `<p class="text-center" id="labelCountdown">EXPIRED</p>`;
+    // }
 
 }, 1000);
